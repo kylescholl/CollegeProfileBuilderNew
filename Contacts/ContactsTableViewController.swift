@@ -12,18 +12,6 @@ class ContactsTableViewController: UITableViewController {
 	
 	var contacts: [Contact] = []
 	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
     // MARK: - Table view data source
 	
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -133,9 +121,26 @@ class ContactsTableViewController: UITableViewController {
 		destination.contact = contact
 	}
 	
+	func addContact() {
+		let newContact = Contact(name: "New Contact")
+		self.contacts.append(newContact)
+		let newIndexPath = NSIndexPath(forRow: self.contacts.count - 1, inSection: 0)
+		self.tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Automatic)
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		tableView.reloadData()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addContact"))
+		navigationItem.rightBarButtonItem = addButton
+		
+		let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
+		navigationItem.leftBarButtonItem = moveButton
 		
 		let jenny = Contact(phoneNumber: "867-5309")
 		let rich = Contact(name: "Rich", phoneNumber: "888-888-8888")
@@ -148,15 +153,6 @@ class ContactsTableViewController: UITableViewController {
 		self.contacts.append(mindy)
 		self.contacts.append(kyle)
 		self.contacts.append(zane)
-		
-		let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
-		navigationItem.leftBarButtonItem = moveButton
-		
-		// Uncomment the following line to preserve selection between presentations
-		// self.clearsSelectionOnViewWillAppear = false
-		
-		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
 	}
 	
 	override func didReceiveMemoryWarning() {

@@ -63,8 +63,8 @@
 				F793D17D1BDE999E008DFD31 /* AppDelegate.swift */,
 				F793D1941BDE9E9B008DFD31 /* ContactsTableViewController.swift */,
 				F793D20B1BE24C1A008DFD31 /* DetailViewController.swift */,
-				F793D1811BDE999E008DFD31 /* Main.storyboard */,
 				F793D2091BE24747008DFD31 /* Contact.swift */,
+				F793D1811BDE999E008DFD31 /* Main.storyboard */,
 				F793D1871BDE999E008DFD31 /* Assets.xcassets */,
 				F793D1891BDE999E008DFD31 /* LaunchScreen.storyboard */,
 				F793D18C1BDE999E008DFD31 /* Info.plist */,
@@ -298,6 +298,7 @@
 				F793D1911BDE999E008DFD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
