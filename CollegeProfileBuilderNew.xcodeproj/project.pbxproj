@@ -44,7 +44,7 @@
 		F793D1711BDE999E008DFD31 = {
 			isa = PBXGroup;
 			children = (
-				F793D17C1BDE999E008DFD31 /* Contacts */,
+				F793D17C1BDE999E008DFD31 /* CollegeProfileBuilderNew */,
 				F793D17B1BDE999E008DFD31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F793D17C1BDE999E008DFD31 /* Contacts */ = {
+		F793D17C1BDE999E008DFD31 /* CollegeProfileBuilderNew */ = {
 			isa = PBXGroup;
 			children = (
 				F793D17D1BDE999E008DFD31 /* AppDelegate.swift */,
@@ -70,7 +70,6 @@
 				F793D18C1BDE999E008DFD31 /* Info.plist */,
 				F793D1841BDE999E008DFD31 /* Colleges.xcdatamodeld */,
 			);
-			name = Contacts;
 			path = CollegeProfileBuilderNew;
 			sourceTree = "<group>";
 		};
